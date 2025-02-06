@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+
+  <script>
+    // Correct way to access and modify the content of the div
+    const myDiv = document.getElementById("myDiv");
+    if (myDiv) {
+      myDiv.textContent = "This text replaces the original content";
+      let myDivContent = myDiv.textContent;
+      console.log(myDivContent);
+    } else {
+      console.error("Div element with id 'myDiv' not found.");
+    }
+  </script>
+</body>
+</html>
